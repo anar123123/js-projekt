@@ -13,6 +13,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  background-color: rgb(255, 245, 245);
 }
 ol,
 ul {
@@ -109,6 +110,82 @@ footer {
         li {
           a {
             font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+main.index-products {
+  .container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    .item {
+      border: 1px solid var(--gray);
+      padding: 20px;
+      background-color: var(--white);
+      .btn {
+        display: flex;
+        justify-content: space-between;
+        .icon-heart {
+          border: none;
+          border-radius: 5px;
+          i {
+            font-size: 25px;
+            padding: 5px;
+            color: var(--light-green);
+            &:hover{
+              color: var(--dark-green);
+            }
+          }
+        }
+        .icon-btn{
+          display: flex;
+          justify-content: center;
+          font-size: 13px;
+          border-radius: 7px;
+          background-color: var(--white);
+          transition: all .3s;
+          padding: 4px;
+          gap: 7px;
+          margin: auto;
+          &:hover{
+            background-color: var(--dark-green);
+          }
+          p{
+            margin-bottom: 0;
+          }
+          
+        }
+      }
+      .data-box {
+        .month-price {
+          background-color: green;
+          color: white;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          padding: 5px;
+          display: flex;
+          display: inline-block;
+          align-items: center;
+        }
+        .price-box {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          .old-price {
+            text-decoration: line-through;
+            color: var(--light-green);
+            opacity: 0.3;
+            font-size: 20px;
+          }
+          .current-price {
+            font-weight: bold;
+            font-size: 25px;
+            color: var(--black);
           }
         }
       }
@@ -236,7 +313,7 @@ main.contact {
         border-radius: 5px;
       }
     }
-    button{
+    button {
       margin-top: 20px;
       width: 250px;
       height: 50px;
@@ -244,8 +321,8 @@ main.contact {
       border: 1px solid transparent;
       border-radius: 5px;
       color: white;
-      transition: all .3s;
-      &:hover{
+      transition: all 0.3s;
+      &:hover {
         background-color: var(--light-green);
       }
     }
