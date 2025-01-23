@@ -118,16 +118,24 @@ footer {
 }
 
 main.index-products {
-  .container {
+  h3{
+    margin-left: 23px;
+  }
+  .standart-container {
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     .item {
+      .img-box{
+        img{
+          width: 100%;
+        }
+      }
       border: 1px solid var(--gray);
       padding: 20px;
       background-color: var(--white);
-      .btn {
+      .actions {
         display: flex;
         justify-content: space-between;
         .icon-heart {
@@ -145,13 +153,13 @@ main.index-products {
         .icon-btn{
           display: flex;
           justify-content: center;
+          align-items: center;
           font-size: 13px;
           border-radius: 7px;
           background-color: var(--white);
           transition: all .3s;
           padding: 4px;
           gap: 7px;
-          margin: auto;
           &:hover{
             background-color: var(--dark-green);
           }
